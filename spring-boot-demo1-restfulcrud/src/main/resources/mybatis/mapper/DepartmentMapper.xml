@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hand.springbootdemo1restfulcrud.mapper.DepartmentMapper">
+    <sql id="queryFields">
+        department.id,department_name
+    </sql>
+    <sql id="insertFields">
+        department_name
+    </sql>
+    <resultMap id="departmentResultMap" type="com.hand.springbootdemo1restfulcrud.entity.Department">
+        <id column="id" javaType="Integer" property="id"></id>
+        <result column="department_name" javaType="String" property="departmentName"></result>
+        <!-- 1对多关系 -->
+        <collection property="employees" ofType="com.hand.springbootdemo1restfulcrud.entity.Employee" javaType="Collection">
+            <id column="e_id" javaType="Integer" property="id"></id>
+            <result column="last_name" javaType="String" property="lastName"></result>
+            <result column="email" javaType="String" property="email"></result>
+            <result column="gender" javaType="Integer" property="gender"></result>
+            <result column="birth" javaType="java.util.Date" property="birth"></result>
+            <result column="username" javaType="String" property="username"></result>
+            <result column="password" javaType="String" property="password"></result>
+            <result column="d_id" javaType="Integer" property="dId"></result>
+
+            <association property="department" javaType="Department">
+                <result column="id" javaType="Integer" property="id"></result>
+                <result column="department_name" javaType="String" property="departmentName"></result>
+            </association>
+        </collection>
+    </resultMap>
+
+    <!-- 查询所有部门，部门中有员工，则查询出员工 -->
+    <select id="selectAll" resultMap="departmentResultMap">
+        select <include refid="queryFields"></include>,e.id as e_id,e.last_name,e.email,e.gender,e.birth,e.username,e.password,e.d_id from department
+            left join employee e
+            on e.d_id = department.id
+    </select>
+
+</mapper>

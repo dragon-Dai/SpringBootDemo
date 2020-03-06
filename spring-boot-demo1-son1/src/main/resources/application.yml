@@ -1,0 +1,25 @@
+person:
+  first-name: dragon${random.int(8,10)}
+  lastName: Dai
+  boss: true
+  brithday: 1996/09/02
+  map: {k1: v1,k2: v2}
+  list:
+    - zhangsan
+    - lisi
+  dog:
+    name: ${person.aa:defaultValue}_dog   #${}占位符，可以获取之前配置的值，也可以获取随机数
+    age: ${random.int(10)}
+spring:
+  profiles:
+    active: prod
+---
+server:
+  port: 8081
+spring:
+  profiles: dev
+---
+server:
+  port: 8082
+spring:
+  profiles: prod

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="spring-boot-demo1-data-jdbc" />
+        <module name="springbootdemo1son2" />
+        <module name="spring-boot-demo1-restfulcrud" />
+        <module name="spring-boot-demo1-autoconfig" />
+        <module name="spring-boot-demo1-data-jpa" />
+        <module name="spring-boot-demo1-starter-test" />
+        <module name="spring-boot-demo1-logging" />
+        <module name="dragondai-spring-boot-autoconfigurer" />
+        <module name="spring-boot-demo1-son1" />
+        <module name="spring-boot-demo1-data-mybatis" />
+        <module name="dragonDaispringbootstarter" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="spring-boot-demo1-starter-test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="dragonDaispringbootstarter" options="-parameters" />
+      <module name="dragondai-spring-boot-autoconfigurer" options="-parameters" />
+      <module name="spring-boot-demo1-autoconfig" options="-parameters" />
+      <module name="spring-boot-demo1-data-jdbc" options="-parameters" />
+      <module name="spring-boot-demo1-data-jpa" options="-parameters" />
+      <module name="spring-boot-demo1-data-mybatis" options="-parameters" />
+      <module name="spring-boot-demo1-logging" options="-parameters" />
+      <module name="spring-boot-demo1-restfulcrud" options="-parameters" />
+      <module name="spring-boot-demo1-son1" options="-parameters" />
+      <module name="spring-boot-demo1-starter-test" options="-parameters" />
+      <module name="springbootdemo1son2" options="-parameters" />
+    </option>
+  </component>
+</project>

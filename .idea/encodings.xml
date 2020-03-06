@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dragonDai-spring-boot-starter" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dragondai-spring-boot-autoconfigurer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-demo1-autoconfig" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-demo1-data-jdbc" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-demo1-data-jpa" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-demo1-data-mybatis" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-demo1-logging" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-demo1-restfulcrud" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-demo1-son1" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-demo1-son2" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-demo1-starter-test" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

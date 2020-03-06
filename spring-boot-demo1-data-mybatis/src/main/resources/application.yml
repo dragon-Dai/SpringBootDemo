@@ -1,0 +1,43 @@
+spring:
+  datasource:
+    #    数据源基本配置
+    username: root
+    password: dragon
+    #mysql8.0以上会出现时区错误,需要添加参数信息声明时区
+    url: jdbc:mysql://localhost:3306/clouddb02?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    initialization-mode: always
+    #当不声明schema配置时,默认加载schema.sql或者shcema-all.sql
+    #    schema: #list
+    #      - classpath:department.sql
+    #设置自定义的数据源
+    type: com.alibaba.druid.pool.DruidDataSource
+    #         数据源其他配置
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    #   配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
+    filters: stat,wall      #,log4j
+    maxPoolPreparedStatementPerConnectionSize: 20
+    useGlobalDataSourceStat: true
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+    #运行数据库建表语句--执行一次就好
+    schema:
+      - classpath:sql/department.sql
+      - classpath:sql/employee.sql
+
+#Mybatis配置
+mybatis:
+  #全局配置文件
+  config-location: classpath:mybatis/mybatis-config.xml
+  #mapper配置文件
+  mapper-locations:
+    - classpath:mybatis/mapper/*.xml
